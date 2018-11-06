@@ -197,9 +197,9 @@ public class MainActivity extends AppCompatActivity{
                 + File.separator + "test.txt"); //txt文件
         fileNames.add(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 + File.separator + "bell.png"); //图片
-        fileNames.add(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)
+        fileNames.add(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 + File.separator + "kobe.mp4"); //视频
-        fileNames.add(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
+        fileNames.add(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 + File.separator + "xinnian.mp3"); //音乐
         return fileNames;
     }
