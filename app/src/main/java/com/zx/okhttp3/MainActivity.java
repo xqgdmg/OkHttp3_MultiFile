@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     //上传文件到服务器的地址(使用的时候替换成自己的服务器地址)
-    private static final String POST_FILE_URL = "http://192.168.1.3:8080/UploadFileDemo/MutilUploadServlet";
+    private static final String POST_FILE_URL = "http://192.168.2.58:8080/UploadFileDemo/MutilUploadServlet";
     //下载文件的地址
     private static final String DOWNLOAD_TEST_URL = "http://oh0vbg8a6.bkt.clouddn.com/app-debug.apk";
 
