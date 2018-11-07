@@ -25,6 +25,8 @@ import com.zx.uploadlibrary.listener.impl.model.ProgressModel;
 
 /**
  * 请求体回调实现类，用于UI层回调
+ * 原理是handler
+ * 感觉封装过于复杂
  */
 public abstract class UIProgressListener implements ProgressListener {
     private boolean isFirst = false;

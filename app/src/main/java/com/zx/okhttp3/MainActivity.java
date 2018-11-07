@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity{
     private ProgressBar uploadProgress, downloadProgress;
     private TextView uploadTV,downloadTv;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,18 +65,6 @@ public class MainActivity extends AppCompatActivity{
 
     //多文件上传（带进度）
     private void upload() {
-        //这个是非ui线程回调，不可直接操作UI
-        final ProgressListener progressListener = new ProgressListener() {
-            @Override
-            public void onProgress(long bytesWrite, long contentLength, boolean done) {
-                Log.i("TAG", "bytesWrite:" + bytesWrite);
-                Log.i("TAG", "contentLength" + contentLength);
-                Log.i("TAG", (100 * bytesWrite) / contentLength + " % done ");
-                Log.i("TAG", "done:" + done);
-                Log.i("TAG", "================================");
-            }
-        };
-
 
         //这个是ui线程回调，可直接操作UI
         UIProgressListener uiProgressRequestListener = new UIProgressListener() {
@@ -138,21 +124,6 @@ public class MainActivity extends AppCompatActivity{
 
     //文件下载
     private void download() {
-        //这个是非ui线程回调，不可直接操作UI
-        final ProgressListener progressResponseListener = new ProgressListener() {
-            @Override
-            public void onProgress(long bytesRead, long contentLength, boolean done) {
-                Log.i("TAG", "bytesRead:" + bytesRead);
-                Log.i("TAG", "contentLength:" + contentLength);
-                Log.i("TAG", "done:" + done);
-                if (contentLength != -1) {
-                    //长度未知的情况下回返回-1
-                    Log.i("TAG", (100 * bytesRead) / contentLength + "% done");
-                }
-                Log.i("TAG", "================================");
-            }
-        };
-
 
         //这个是ui线程回调，可直接操作UI
         final UIProgressListener uiProgressResponseListener = new UIProgressListener() {
